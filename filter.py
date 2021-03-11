@@ -54,16 +54,16 @@ def apply_filter(frame, pts_dict):
                            (mouth_center_top_lip_x, mouth_center_top_lip_y)))
     
     filterpath = "GuyFawkes";
-    #frame = apply_filter_eye_helper(frame, int(left_eye_center_x), int(left_eye_center_y), int(radius_left))
-    #frame = apply_filter_eye_helper(frame, int(right_eye_center_x), int(right_eye_center_y), int(radius_right))
+    frame = apply_filter_eye_helper(frame, int(left_eye_center_x), int(left_eye_center_y), int(radius_left))
+    frame = apply_filter_eye_helper(frame, int(right_eye_center_x), int(right_eye_center_y), int(radius_right))
     #frame = apply_filter_mouth_helper(frame, int((left_eye_inner_corner_x+right_eye_inner_corner_x)/2),
-                                #int((left_eye_inner_corner_y+right_eye_inner_corner_y)/2), int(length_eyes), int(radius_eyes), filterpath)
+                              #  int((left_eye_inner_corner_y+right_eye_inner_corner_y)/2), int(length_eyes), int(radius_eyes), filterpath)
     
-    frame = apply_filter_mouth_helper(frame, int(nose_tip_x),
-                                int(nose_tip_y), int(face_length), int(face_height), filterpath)
+    #frame = apply_filter_mouth_helper(frame, int(nose_tip_x),
+     #                           int(nose_tip_y), int(face_length), int(face_height), filterpath)
     
-    #frame = apply_filter_mouth_helper(frame, int(mouth_center_top_lip_x),
-                                #int(mouth_center_top_lip_y), int(length_mouth), int(height_mouth), 'moustache')
+    frame = apply_filter_mouth_helper(frame, int(mouth_center_top_lip_x),
+                                int(mouth_center_top_lip_y), int(length_mouth), int(height_mouth), 'moustache')
     return frame
 
 

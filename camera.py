@@ -4,7 +4,7 @@ import cv2
 from filter import apply_filter
 from model import FaceKeypointsCaptureModel
 
-rgb = cv2.VideoCapture('efg.mp4')
+rgb = cv2.VideoCapture('efgg.mp4')
 length = int(rgb.get(cv2.CAP_PROP_FRAME_COUNT))
 fps = int(rgb.get(cv2.CAP_PROP_FPS))
 facec = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
